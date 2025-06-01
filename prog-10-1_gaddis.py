@@ -13,7 +13,7 @@ class Coin:
 
     # initialize sideup data attr with "Heads"
     def __init__(self):
-        self.sideup = "Heads"
+        self.__sideup = "Heads" #private attr
 
     
     # toss method generates random number in range 0, 1
@@ -22,11 +22,25 @@ class Coin:
 
     def toss(self):
         if random.randint(0, 1) == 0:
-            self.sideup = "Heads"
+            self.__sideup = "Heads"
         else:
-            self.sideup = "Tails"
+            self.__sideup = "Tails"
     
     def get_sideup(self):
-        return self.sideup
+        return self.__sideup
 
+#
+# Testing
+def main():
+    my_coin = Coin()
+
+    print(f"{my_coin.get_sideup()} is the side that is up")
+
+    print("The coin is tossed...")
+    my_coin.toss()
+
+    print(f"{my_coin.get_sideup()} is the side that is up")
+    #
+#
+main()
     
