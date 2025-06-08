@@ -29,3 +29,7 @@ class Pet:
     
     def get_age(self):
         return self.__age
+    
+    def __str__(self):
+        stat = f"{self.__name} is a {self.__age} year old {self.__animal_type}"
+        return stat
