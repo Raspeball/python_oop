@@ -1,10 +1,11 @@
 #
-import ex-1_chp-10 as petinfo
+import petinfo
 #
 #
 #
 # --- Main program --- #
 def main():
+    #
     # user input
     name = input("Enter the name of your pet: ")
     print(f"You entered {name} as the name of your pet")
@@ -16,10 +17,15 @@ def main():
     print(f"You entered {pet_type} as the type of your pet")
     
     # create pet object
-    pet = petinfo.Pet(name, age, pet_type)
+    pet = petinfo.Pet(name, pet_type, age)
     
     # Display pet information
     print(pet)
+    #
+#
+#
+#
 
 # call main function
-main()
+if __name__ == "__main__":
+    main()
